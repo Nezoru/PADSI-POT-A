@@ -63,23 +63,35 @@ body {
 }
 
 /* Nav link Sidebar */
-.sidebar .nav-link {
+#sidebar .nav-link {
   font-weight: 500;
-  color: #333; /* Warna default untuk sidebar 'bg-light' */
+  background-color: #BF092F; /* Latar belakang putih */
+  color: #f8f9fa;           /* Teks warna gelap (hitam) */
+    
+    /* Transisi agar perpindahan warna mulus 0.2 detik */
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.sidebar .nav-link .bi {
+#sidebar .nav-link .bi {
+  color: #f8f9fa;
   margin-right: 8px;
+  transition: color 0.2s;
 }
 
 /* Link Aktif */
-.sidebar .nav-link.active {
-  color: #2470dc; /* Warna biru untuk link aktif */
-  background-color: transparent; /* Hapus background, hanya warnai teks */
+#sidebar .nav-link:hover,
+#sidebar .nav-link.active {
+  background-color: #f8f9fa; /* Latar belakang merah (kebalikan) */
+  color: #212529;           /* Teks warna putih (kebalikan) */
 }
 
-.sidebar .nav-link:hover {
+/* .sidebar .nav-link:hover {
   color: #2470dc;
+} */
+
+#sidebar .nav-link:hover .bi,
+#sidebar .nav-link.active .bi {
+    color: #BF092F;           /* Ikon warna putih (kebalikan) */
 }
 
 .sidebar-heading {
